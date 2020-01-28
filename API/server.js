@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const keys = require('./config/dev');
+const cors = require('cors');
 
 mongoose.connect(keys.mongoURI, (err, res) => {
   if (err) throw err;
@@ -9,6 +10,7 @@ mongoose.connect(keys.mongoURI, (err, res) => {
 });
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
