@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mongo:
+    image: 'mongo:latest'
+  api:
+    depends_on:
+      - mongo
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./API
+    volumes:
+      - /app/node_modules
+      - ./API:/app
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/proyecto1
