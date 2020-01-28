@@ -1,20 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const keys = require('./config/keys');
+const keys = require('./config/dev');
 
-// require('./models/User');
-// require('./models/Temperature');
-
-// mongoose.Promise = global.Promise;
-// mongoose.connect(keys.mongoURI, { useMongoClient: true });
+mongoose.connect(keys.mongoURI, (err, res) => {
+  if (err) throw err;
+  console.log('Base de datos ONLINE');
+});
 
 const app = express();
-
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// require('./routes/authRoutes')(app);
-// require('./routes/temperatureRoutes')(app);
+require('./routes/login')(app);
+require('./routes/userRoutes')(app);
 
 app.listen(keys.puerto, () => {
   console.log(`Listening on port`, keys.puerto);
