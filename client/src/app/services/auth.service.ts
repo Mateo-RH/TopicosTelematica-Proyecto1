@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { UsuarioModel } from "../models/usuario.model";
 
 import { map } from "rxjs/operators";
@@ -27,6 +27,11 @@ export class AuthService {
         return resp;
       })
     );
+  }
+
+  obtenerCoordenadas() {
+    const header = new HttpHeaders({ ["token"]: this.userToken });
+    return this.http.get(`${this.url}/user`, { headers: header });
   }
 
   nuevoUsuario(usuario: UsuarioModel) {

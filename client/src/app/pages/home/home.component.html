@@ -1,11 +1,24 @@
-<div class="m-5">
-
-    <h1>Mi aplicacion secreta</h1>
+<div class="map-container">
+    <h1>Coordenadas</h1>
+    <hr>
+    <div class="map-frame">
+        <div id="map"></div>
+    </div>
     <hr>
 
-    <button class="btn btn-outline-danger" (click)="salir()">
-      Logout
-    </button>
 
-
+    <div class="panel panel-primary mb-5" id="result_panel">
+        <div class="panel-body">
+            <div class="panel-heading">
+                <h3 class="panel-title">Latitude/Longitude</h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let coord of coordenadas; let i = index"><strong>{{i+1}}.</strong> {{coord}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-outline-danger" id="logoutButton" (click)="salir()">
+                  Logout
+                </button>
 </div>
