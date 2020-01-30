@@ -47,6 +47,8 @@ Simular la captura de los datos de geolocalización GPS a traves del servicio *P
 | JWT | Autenticación |
 | Angular | Frontend |
 | Leaflet | Graficos/Mapas |
+| Nginx | Load Balancer |
+| Docker| Contenedores |
 
 ## Documentación de postman
 
@@ -55,11 +57,10 @@ https://documenter.getpostman.com/view/4010438/SWTBeHVt?version=latest
 ## Instrucciones de instalación
 
 ### Requisitos
-* [docker](https://www.docker.com/) y [docker-compose](https://docs.docker.com/compose/install/) instalados
-* [node](https://nodejs.org/es/download/) y [angular](https://cli.angular.io/) instalados
-* (Opcional) [Postman](https://www.getpostman.com/)
+* [docker-compose](https://docs.docker.com/compose/install/)
+* [Postman](https://www.getpostman.com/) (Opcional)
 
-### Backendend
+### Ejecución
 
 Desde el directorio raiz, ejecutar
 
@@ -67,20 +68,4 @@ Desde el directorio raiz, ejecutar
 docker-compose up
 ```
 
-### Frontend
 
-#### Instalacion de paquetes
-
-Desde el directorio *client*, ejecutar
-
-```
-npm install
-```
-
-#### Correr el frontend
-
-En este mismo directorio, ejecutar
-
-```
-npm start
-```
