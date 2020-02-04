@@ -17,7 +17,7 @@ Diseñar y desarrollar una aplicacion que cumpla con todos los requisitos en el 
 Simular la captura de los datos de geolocalización GPS a traves del servicio *Postman*.
 
 ## Diseño
-![Diagrama](/imagenes/DiseñoSistema.JPG)
+![Diagrama](/imagenes/DiseñoSistemaDocker.jpg)
 
 ## Requisitos Funcionales
 
@@ -50,7 +50,7 @@ Simular la captura de los datos de geolocalización GPS a traves del servicio *P
 | Nginx | Load Balancer |
 | Docker| Contenedores |
 
-## Documentación de postman
+## Especificación de los servicios API REST
 
 https://documenter.getpostman.com/view/4010438/SWTBeHVt?version=latest
 
