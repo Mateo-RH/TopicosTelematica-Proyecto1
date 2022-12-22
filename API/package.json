@@ -15,7 +15,7 @@
     "mongoose": "^5.8.10",
     "mongoose-unique-validator": "^2.0.2",
     "nodemon": "^2.0.2",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "cors": "2.8.4",
     "bcryptjs": "^2.4.3"
   }
